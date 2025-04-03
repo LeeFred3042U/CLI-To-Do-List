@@ -26,10 +26,10 @@ Since the project is split into multiple files, **you must include all Go files 
 
 | Command             | Description                           | Example Usage                              |
 |---------------------|---------------------------------------|--------------------------------------------|
-| `add <task>`       | Add a new task                        | `go run *.go add "Finish Go project"`     |
-| `list`             | Show all tasks                        | `go run *.go list`                        |
-| `done <task_id>`   | Mark a task as completed              | `go run *.go done 1`                      |
-| `delete <task_id>` | Delete a task                         | `go run *.go delete 1`                    |
+| `add <task>`       | Add a new task                        | `go run main.go storage.go task.go add "Finish Go project"`     |
+| `list`             | Show all tasks                        | `go run main.go storage.go task.go list`                        |
+| `done <task_id>`   | Mark a task as completed              | `go run main.go storage.go task.go done 1`                      |
+| `delete <task_id>` | Delete a task                         | `go run main.go storage.go task.go delete 1`                    |
 ## 🛠️ How It Works
 
 1. Tasks are stored in `tasks.json` for persistence.  
