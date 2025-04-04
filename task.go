@@ -5,7 +5,7 @@ import "encoding/json"
 // Task represents a single to-do task
 type Task struct {
 	ID   int    `json:"id"`
-	Name string `json:"name"`
+	Text string `json:"text"`
 	Done bool   `json:"done"`
 }
 

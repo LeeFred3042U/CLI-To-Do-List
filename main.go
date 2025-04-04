@@ -22,7 +22,7 @@ func main() {
 			fmt.Println("Provide a task description")
 			return
 		}
-		task := Task{ID: len(tasks) + 1, Name: os.Args[2]} // Ensure Task struct exists in tasks.go
+		task := Task{ID: len(tasks) + 1, Text: os.Args[2]} // Ensure Task struct exists in tasks.go
 		tasks = append(tasks, task)
 		saveTasks(tasks) // Ensure saveTasks() is correctly defined in storage.go
 		fmt.Println("Task added!")
@@ -33,7 +33,7 @@ func main() {
 			return
 		}
 		for _, task := range tasks {
-			fmt.Printf("[%d] %s (Done: %v)\n", task.ID, task.Name, task.Done)
+			fmt.Printf("[%d] %s (Done: %v)\n", task.ID, task.Text, task.Done)
 		}
 
 	case "done":

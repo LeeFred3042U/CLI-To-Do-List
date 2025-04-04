@@ -17,10 +17,19 @@ A simple command-line **To-Do List** built using **Go**, storing tasks in a JSON
 
 ## 2️⃣ Run the Program
 
-Since the project is split into multiple files, **you must include all Go files when running**:
+### Build and Run the Executable
 
+    go build -o To_Do_List.exe
+    ./To_Do_List.exe <command> [arguments]
+
+### OR
+
+### Run Without Building (For Testing)
+If you don’t want to create an exe and just want to test the code:
     
+
     go run main.go storage.go task.go <command> [arguments]
+
 
 ## 📜 Commands & Usage
 

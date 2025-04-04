@@ -2,13 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"os"
 )
 
 // loadTasks reads tasks from tasks.json
 func loadTasks() ([]Task, error) {
-	file, err := ioutil.ReadFile("tasks.json")
+	file, err := os.ReadFile("tasks.json")
 	if err != nil {
 		if os.IsNotExist(err) {
 			return []Task{}, nil // Return empty if file doesn't exist
@@ -32,5 +31,5 @@ func saveTasks(tasks []Task) error {
 		return err
 	}
 
-	return ioutil.WriteFile("tasks.json", data, 0644)
+	return os.WriteFile("tasks.json", data, 0644)
 }
